@@ -9,6 +9,7 @@ import { TodoListMetaData } from './TodoList/router-data';
 import { ReactUseRefMetaData } from './ReactUseRef/router-data';
 import { ReduxTestMetaData } from './ReduxTest/router-data';
 import { ReduxCounterMetaData } from './ReduxCounter/router-data';
+import { MoleGameMetaData } from './Mole II/router-data';
 
 export const blockRouterMetaData = [
   SubRouteExampleMetaData,
@@ -21,5 +22,6 @@ export const blockRouterMetaData = [
   ReactUseRefMetaData,
   ReduxTestMetaData,
   ReduxCounterMetaData,
+  MoleGameMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

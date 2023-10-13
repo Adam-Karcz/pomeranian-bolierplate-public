@@ -1,0 +1,12 @@
+.field {
+  min-width: 7rem;
+  min-height: 7rem;
+  border: 1px solid var(--grey-300);
+  border-radius: 0.5rem;
+}
+.red {
+  background-color: var(--color-danger-light);
+}
+.green {
+  background-color: var(--color-succes-light);
+}
