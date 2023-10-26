@@ -58,7 +58,10 @@ export const MemoGame = () => {
   );
 
   useEffect(() => {
-    if (memoArray?.find(({ isGuessed }) => isGuessed === false || gameEnded)) {
+    if (
+      memoArray.length === 0 ||
+      memoArray?.find(({ isGuessed }) => isGuessed === false || gameEnded)
+    ) {
       console.log('sąnieodganiete');
       return;
     } else {
@@ -184,17 +187,17 @@ export const MemoGame = () => {
     }
     return classes.join(' ');
   }
-
   return (
     <>
-      {gameEnded && score !== 0 ? (
-        <MemoGameScore
-          moveCount={moveCount}
-          score={score}
-          getAmountOfChar={getAmountOfChar}
-          startStopGame={startStopGame}
-        />
-      ) : null}
+      {!memoArray.length === 0 ||
+        (gameEnded && score !== 0 && (
+          <MemoGameScore
+            moveCount={moveCount}
+            score={score}
+            getAmountOfChar={getAmountOfChar}
+            startStopGame={startStopGame}
+          />
+        ))}
       {!gameStarted ? (
         <MemoGameSettings
           boardSize={boardSize}
